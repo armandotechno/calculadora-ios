@@ -1,4 +1,4 @@
-package com.calculadora;
+package com.armandocapriles.calculadorarn;
 
 import android.os.Bundle; // here
 
