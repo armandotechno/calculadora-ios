@@ -1,7 +1,11 @@
 import { Text, View } from 'react-native';
 import { BotonCalc } from '../components/BotonCalc';
+
+import SplashScreen from 'react-native-splash-screen'
+
 import { useCalculadora } from '../hooks/useCalculadora';
 import { styles } from '../theme/appTheme';
+import { useEffect } from 'react';
 
 export const CalculadoraScreen = () => {
 
@@ -18,6 +22,10 @@ export const CalculadoraScreen = () => {
         limpiar, 
         positivoNegativo 
     } = useCalculadora();
+
+    useEffect(() => {
+        SplashScreen.hide();
+    }, [])
 
     return (
         <View style={ styles.calculadoraContainer }>
